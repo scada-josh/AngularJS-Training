@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="Guidebook">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Starter Guidebook</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+
+   <script src='Guidebook.config.js'></script>
+    <script src='controller/ChapterController.js'></script>
+    <script src='controller/NotesController.js'></script> 
+   <script src='model/NoteModel.js'></script> 
+   <script src='model/ChapterModel.js'></script>
+   <link rel='stylesheet' href='view/styles.css'>
+
+</head>
+<body>
+
+  <h1>Welcome to the AngularJS Starter Guidebook</h1>
+  <div ng-view>
+   <!-- Views are added here at runtime. -->
+ </div>
+
+</body>
+</html>
+
+
