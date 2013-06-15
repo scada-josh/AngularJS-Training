@@ -3,6 +3,7 @@ Guidebook.controller('ChaptersController',function ($scope, $location, $routePar
   //alert('ChaptersController, chapterId is ' + $routeParams.chapterId);
 
    var chapters = ChapterModel.getChapters();
+   
 
    for (var i=0; i<chapters.length; i++) {
      //chapters[i].notes = NoteModel.getNotesForChapter(chapters[i].id);
@@ -11,6 +12,7 @@ Guidebook.controller('ChaptersController',function ($scope, $location, $routePar
    }
    
    $scope.chapters = chapters;
+   console.log($scope.chapters);
    $scope.selectedChapterId = $routeParams.chapterId;
    //console.log($scope.chapters);
 
