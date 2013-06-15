@@ -23,7 +23,7 @@ Guidebook.service('ChapterModel', function() {
 			       	summary: 'Get to know the top contributors...'
 			       }, {
 			       	id: 5,
-			       	title: 'บทที่ 5: ทดสอบ AngularJS',
+			       	title: 'บทที่ 6: ทดสอบ AngularJS',
 			       	summary: 'อยากให้รู้ว่า ลอง'
 			       }
 			]}; 

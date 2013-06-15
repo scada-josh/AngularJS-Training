@@ -1,27 +1,28 @@
 Guidebook.service('NoteModel', function() {
 
   this.getNotesForChapter = function(chapterId) {
-    alert('This is getNotesForChapter Model, chapterId is '+chapterId);
-    // var chapter = JSON.parse(window.localStorage.getItem(chapterId));
-    // if (!chapter) {
-    //   return []; 
-    // }
-    // return chapter.notes;
+    //alert('This is getNotesForChapter Model, chapterId is '+chapterId);
+    var chapter = JSON.parse(window.localStorage.getItem(chapterId));
+    //alert(chapter);
+    if (!chapter) {
+      return []; 
+    }
+    return chapter.notes;
   };
 
   this.addNote = function(chapterId, noteContent) {
-    alert('This is addNote Model');
-    // var now = new Date();
-    // var note = {content: noteContent, id: now };
-    // var chapter = JSON.parse(window.localStorage.getItem(chapterId));
-    // if (!chapter) {
-    //   chapter = {
-    //     id: chapterId,
-    //     notes: []
-    //   } 
-    // }
-    // chapter.notes.push(note);
-    // window.localStorage.setItem(chapterId, JSON.stringify(chapter));
+    //alert('This is addNote Model');
+    var now = new Date();
+    var note = {content: noteContent, id: now };
+    var chapter = JSON.parse(window.localStorage.getItem(chapterId));
+    if (!chapter) {
+      chapter = {
+        id: chapterId,
+        notes: []
+      } 
+    }
+    chapter.notes.push(note);
+    window.localStorage.setItem(chapterId, JSON.stringify(chapter));
   };
 
   this.deleteNote = function(chapterId, noteId) {
