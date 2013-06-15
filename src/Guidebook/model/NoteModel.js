@@ -3,7 +3,7 @@ Guidebook.service('NoteModel', function() {
   this.getNotesForChapter = function(chapterId) {
     //alert('This is getNotesForChapter Model, chapterId is '+chapterId);
     var chapter = JSON.parse(window.localStorage.getItem(chapterId));
-    //alert(chapter);
+
     if (!chapter) {
       return []; 
     }
@@ -11,7 +11,8 @@ Guidebook.service('NoteModel', function() {
   };
 
   this.addNote = function(chapterId, noteContent) {
-    //alert('This is addNote Model');
+    alert('This is addNote Model' + noteContent);
+
     var now = new Date();
     var note = {content: noteContent, id: now };
     var chapter = JSON.parse(window.localStorage.getItem(chapterId));
