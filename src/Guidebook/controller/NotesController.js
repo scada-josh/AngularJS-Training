@@ -16,9 +16,9 @@ Guidebook.controller('AddNoteController', function ($scope, $location, $routePar
 
 Guidebook.controller('DeleteNoteController', function ($scope, $location, $routeParams, NoteModel) {
 
-      alert('DeleteNoteController, chapterId is ' + $routeParams.chapterId +', NoteID is '+ $routeParams.noteId);
+      //alert('DeleteNoteController, chapterId is ' + $routeParams.chapterId +', NoteID is '+ $routeParams.noteId);
 
-       // var chapterId = $routeParams.chapterId;
-       // NoteModel.deleteNote(chapterId, $routeParams.noteId);
-       // $location.path('/chapter/' + chapterId);
+       var chapterId = $routeParams.chapterId;
+       NoteModel.deleteNote(chapterId, $routeParams.noteId);
+       $location.path('/chapter/' + chapterId);
 } );
