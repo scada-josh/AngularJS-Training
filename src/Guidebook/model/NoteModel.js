@@ -1,7 +1,7 @@
 Guidebook.service('NoteModel', function() {
 
   this.getNotesForChapter = function(chapterId) {
-    alert('This is getNotesForChapter Model');
+    alert('This is getNotesForChapter Model, chapterId is '+chapterId);
     // var chapter = JSON.parse(window.localStorage.getItem(chapterId));
     // if (!chapter) {
     //   return []; 

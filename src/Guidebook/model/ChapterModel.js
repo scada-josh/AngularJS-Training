@@ -21,6 +21,10 @@ Guidebook.service('ChapterModel', function() {
 			       	id: 4,
 			       	title: 'Chapter 5: The AngularJS Community',
 			       	summary: 'Get to know the top contributors...'
+			       }, {
+			       	id: 5,
+			       	title: 'บทที่ 5: ทดสอบ AngularJS',
+			       	summary: 'อยากให้รู้ว่า ลอง'
 			       }
 			]}; 
 });
