@@ -13,10 +13,8 @@
       |
       <a href='#/addNote/{{chapter.id}}'>add note</a>
     </p>
-<div gb-note-list notes='chapter.notes'
-  orderBy='id'
-  show='chapter.id == selectedChapterId'
-  deleteNoteHandler='onDelete'>
-</div>
+    <div gb-note-list notes='chapter.notes' orderBy='id' 
+         show='chapter.id == selectedChapterId' deleteNoteHandler='onDelete'>
+    </div>
   </li>
 </ul>

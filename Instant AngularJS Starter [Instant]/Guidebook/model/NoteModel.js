@@ -8,7 +8,6 @@ Guidebook.service('NoteModel',
       }
       return chapter.notes;
     };
-
     this.addNote = function(chapterId, noteContent) {
       var now = new Date();
       var note = {
@@ -25,7 +24,6 @@ Guidebook.service('NoteModel',
       chapter.notes.push(note);
       window.localStorage.setItem(chapterId, JSON.stringify(chapter));
     };
-    
     this.deleteNote = function(chapterId, noteId) {
       var chapter = JSON.parse(window.localStorage.getItem(chapterId));
       if (!chapter || !chapter.notes) {

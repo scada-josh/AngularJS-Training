@@ -39,3 +39,11 @@ textarea {
   width: 250px;
   height: 100px;
 }
+
+.odd {
+  background-color: red;
+}
+
+.even {
+  background-color: blue;
+}

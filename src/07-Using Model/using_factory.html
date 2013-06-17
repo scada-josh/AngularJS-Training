@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>07-Using Model : Service Factory Provider</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+   <script src="../../lib/angular-1.0.7/angular-resource.js"></script>
+   <script type="text/javascript">
+
+   // angular.module('myApp.service',[]);
+   // angular.module('myApp',['myApp.service']);
+   // var StatesController = function($scope) {
+
+   // }
+
+
+   angular.module('myApp.service',['ngResource'])
+          .factory('States', function($resource){
+            return $resource('./Rest/phones.json', {},{
+              get: {method: 'GET', isArray:true}
+            });
+          });
+
+   angular.module('myApp',['myApp.service']);
+
+   var StatesController = function($scope,States) {
+                            $scope.stateData = States.get();
+                          };
+
+
+   </script>
+</head>
+<body ng-controller="StatesController">
+
+  <ul class="states">
+     <li ng-repeat="state in stateData | orderBy:'age'">
+         <div class="resultwrapper">
+            <span class="title">{{state.age}}</span><br>
+            <span class="bold">Abbreviation:</span> {{state.id}}<br>
+            <hr/>
+         </div>
+     </li>
+  </ul>
+
+</body>
+</html>
+
+

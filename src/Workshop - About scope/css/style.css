@@ -1,0 +1,52 @@
+body {
+    font: 11pt Helvetica,Arial;
+    width:600px;
+    background: #ebebeb;
+}
+
+ul {
+  list-style: none;
+  padding:0;
+}
+
+input {
+    font-size: 10pt;
+}
+
+.sectiontitle {
+    color:red;
+    text-align: right;
+    width:100%;
+}
+
+.inputfield {
+    color:blue;
+}
+
+.floatingbox {
+    float:left;
+    width:260px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+    margin:5px;
+    padding:5px;
+}
+
+.parent {
+    width:100%;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #d0d0d0;
+    margin:5px;
+    padding:5px;
+}
+
+.child {
+    width:580px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #b8b8b8;
+    margin:10px 2px;
+    padding:5px;
+}

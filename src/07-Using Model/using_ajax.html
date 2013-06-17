@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>07-Using Model : Service Factory Provider</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+   <script src="../../lib/angular-1.0.7/angular-resource.js"></script>
+   <link rel="stylesheet" href="./css/style.css">
+
+   <script type="text/javascript">
+
+   function ArtistsController($scope, $http) {
+    IMAGE_ROOT = "http://rabidgadfly.com/assets/angular/dataload/";
+    DEFAULT_IMAGE = "blank.gif";
+    
+    $scope.selectedArtist = "";
+    $scope.selectedArtistImage = IMAGE_ROOT + DEFAULT_IMAGE;
+    
+    $http.get('./Rest/artists.json').success(function(data) {
+      $scope.artists = data;
+      //console.log(data);
+    });
+
+    $scope.setSelectedArtist = function(artist) {
+      $scope.selectedArtist = artist;
+      if( artist.image ) {
+        $scope.selectedArtistImage = IMAGE_ROOT + artist.image;
+      } else {
+        $scope.selectedArtistImage = IMAGE_ROOT + DEFAULT_IMAGE;
+      }
+    };
+
+  }
+
+
+   </script>
+</head>
+<body>
+
+    <!-- Link this DOM object to the ArtistsController in app.js -->
+    <div ng-controller="ArtistsController">
+
+        <div class="floatingbox list">
+            <p> Click an artist/band name below:</p>
+            <ul>
+            <!-- Iterate through all artists creating anchor tabs with ng-click
+                 directives that will call ArtistsController's setSelectedArtist
+                 function and pass it the clicked artist object. The function will
+                 update selectedArtist which will cause the detail to fill in below. -->
+                <li ng-repeat="artist in artists">
+                    <a href ng-click='setSelectedArtist(artist)'>{{artist.artistName}}</a></li>
+                </li>
+            </ul>
+        </div>
+
+        <!-- This section will automatically display detail when selectedArtist is updated -->
+        <div class="floatingbox detail">
+            <div class="detailimagewrapper">
+                <img class="detailimage" src="{{selectedArtistImage}}" >
+            </div>
+            <p>{{selectedArtist.description}}</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+

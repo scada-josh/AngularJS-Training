@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html ng-app>
+<head>
+ <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js'></script>
+ <script>
+ function ColorController($scope) {
+   $scope.setColor = function() {
+     var colours = document.getElementsByTagName('input');
+     document.getElementById('label').style.color = 'rgb('+ colours[0].value + ','+ colours[1].value + ','+ colours[2].value + ')';
+    } 
+}
+</script>
+<title>AngularJS Color Picker</title>
+</head>
+<body ng-controller='ColorController'>
+ <h1 id='label' style='color: rgb(128,128,128);'>Drag to change colour:</h1>
+ <input type='range' min='0' max='255' step='1' ng-model='r' ng-change='this.setColor();'>
+ <input type='range' min='0' max='255' step='1' ng-model='g' ng-change='setColor();'>
+ <input type='range' min='0' max='255' step='1' ng-model='b' ng-change='setColor();'>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html ng-app>
+<head>
+ <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js'></script>
+ <title>AngularJS Color Picker</title>
+</head>
+<body ng-init='r=128; b=128; g=128;'>
+ <h1 style='color: rgb({{r}},{{g}},{{b}});'>Drag to change colour:</h1>
+ <input type='range' min='0' max='255' step='1' ng-model='r'>
+ <input type='range' min='0' max='255' step='1' ng-model='g'>
+ <input type='range' min='0' max='255' step='1' ng-model='b'>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js'></script>
+  <title>AngularJS Color Picker</title>
+</head>
+<body ng-init='r=128; b=128; g=128;'>
+  <h1 ng-click='r=128; b=128; g=128;'style='color: rgb({{r}},{{g}},{{b}});'>Drag to change colour, click here to reset.</h1>
+  <input type='range' min='0' max='255' step='1' ng-model='r'>
+  <input type='range' min='0' max='255' step='1' ng-model='g'>
+  <input type='range' min='0' max='255' step='1' ng-model='b'>
+</body>
+</html>

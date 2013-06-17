@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>07-Using Model : Service Factory Provider</title>
+  <!-- <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css"> -->
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+  <!-- <script src="../../lib/angular-1.0.7/angular-resource.js"></script> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./Controller/controller.js"></script>
+
+   </script>
+</head>
+<body>
+
+<!-- ----------------- -->
+<!-- Begin Limericks -->
+<!-- ----------------- -->
+
+<!-- Tell the div to use the Limericks scope defined in our app.js -->
+<div ng-controller="Limericks" class="parent">
+    <p class="sectiontitle">Limericks</p>
+
+    <h1>{{pageTitle}}</h1>
+    <p>Parent pageTitle: 
+        <input name="pageTitle" type="text" placeholder="Parent pageTitle" ng-model="pageTitle">
+    </p>
+    <p>Global Author: <input name="authorName" type="text" placeholder="Global author" ng-model="author"></p>
+
+    <!-- ----------------- -->
+    <!-- Begin Limerick1 -->
+    <!-- ----------------- -->
+
+    <!-- Tell the div to use the Limerick1 scope defined in our app.js -->
+    <div ng-controller="Limerick1" class="child">
+
+        <p class="sectiontitle">Limerick1</p>
+
+        <!-- pageTitle inherited from parent scope -->
+        <h1>{{pageTitle}}</h1>
+        <p>Inherited pageTitle: 
+            <input name="pageTitle" type="text" placeholder="Inherited pageTitle" ng-model="pageTitle">
+        </p>
+
+        <div class="floatingbox">
+            <h2>{{title}}</h2>
+            <p>
+                There once was a <span class="inputfield">{{field1}}</span> named <span class="inputfield">{{field2}}</span><br>
+                Who liked to drive round <span class="inputfield">{{field3}}</span><br>
+                He drove 'round so <span class="inputfield">{{field4}}</span><br>
+                That <span class="inputfield">{{field5}}</span><br>
+                <span class="inputfield">{{field6}}</span>
+            </p>
+        </div>
+        <div class="floatingbox">
+
+            <ul>
+                <li>Title: <input name="l1title" type="text" placeholder="{{title}}" ng-model="title"></li>
+                <li>Field 1: <input name="l1field1" type="text" placeholder="{{field1}}" ng-model="field1"></li>
+                <li>Field 2: <input name="l1field2" type="text" placeholder="{{field2}}" ng-model="field2"></li>
+                <li>Field 3: <input name="l1field3" type="text" placeholder="{{field3}}" ng-model="field3"></li>
+                <li>Field 4: <input name="l1field4" type="text" placeholder="{{field4}}" ng-model="field4"></li>
+                <li>Field 5: <input name="l1field5" type="text" placeholder="{{field5}}" ng-model="field5"></li>
+                <li>Field 6: <input name="l1field6" type="text" placeholder="{{field6}}" ng-model="field6"></li>
+            </ul>
+        </div>
+        <div style="clear:both;"></div>
+
+        <!-- Author is inherited from parent scope -->
+        <p>All limericks authored by: {{author}}</p>
+
+    </div>
+
+    <!--------------------->
+    <!-- End Limerick1 -->
+    <!--------------------->
+
+
+    <!--------------------->
+    <!-- Begin Limerick2 -->
+    <!--------------------->
+
+    <!-- Tell the div to use the Limerick2 scope defined in our app.js -->
+    <div ng-controller="Limerick2" class="child">
+
+        <p class="sectiontitle">Limerick2</p>
+
+        <!-- pageTitle inherited from parent scope -->
+        <h1>{{pageTitle}}</h1>
+        <p>Inherited pageTitle: 
+            <input name="pageTitle" type="text" placeholder="Inherited pageTitle" ng-model="pageTitle">
+        </p>
+
+        <div class="floatingbox">
+            <h2>{{title}}</h2>
+            <p>
+                There once was a <span class="inputfield">{{field1}}</span> named <span class="inputfield">{{field2}}</span><br>
+                Who liked to drive round <span class="inputfield">{{field3}}</span><br>
+                He drove 'round so <span class="inputfield">{{field4}}</span><br>
+                That <span class="inputfield">{{field5}}</span><br>
+                <span class="inputfield">{{field6}}</span>
+            </p>
+        </div>
+
+        <div class="floatingbox">
+            <ul>
+                <li>Title: <input name="l2title" type="text" placeholder="{{title}}" ng-model="title"></li>
+                <li>Field 1: <input name="l2field1" type="text" placeholder="{{field1}}" ng-model="field1"></li>
+                <li>Field 2: <input name="l2field2" type="text" placeholder="{{field2}}" ng-model="field2"></li>
+                <li>Field 3: <input name="l2field3" type="text" placeholder="{{field3}}" ng-model="field3"></li>
+                <li>Field 4: <input name="l2field4" type="text" placeholder="{{field4}}" ng-model="field4"></li>
+                <li>Field 5: <input name="l2field5" type="text" placeholder="{{field5}}" ng-model="field5"></li>
+                <li>Field 6: <input name="l2field6" type="text" placeholder="{{field6}}" ng-model="field6"></li>
+            </ul>
+        </div>
+        <div style="clear:both;"></div>
+
+        <!-- Author is inherited from parent scope -->
+        <p>All limericks authored by: {{author}}</p>
+
+    </div>
+
+    <!------------------- -->
+    <!-- End Limerick2 -->
+    <!------------------- -->
+
+
+</div>
+
+<!--------------------->
+<!-- End Limericks -->
+<!--------------------->
+
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="Guidebook">
+<head>
+  <meta charset="utf-8">
+  <title>xx-Using Directive</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+  <!-- <script src="../../lib/angular-1.0.7/angular-resource.js"></script> -->
+  <script type="text/javascript" src="../../lib/jquery-1.8.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./index.config.js"></script>
+
+  <script src="./Controller/loginController.js"></script>
+  <script src="./view/directives/login.js"></script>
+</head>
+<body >
+    <div ng-controller="ChaptersController">
+      <div gb-note-list delete-note-handler='onDelete' user-email='userEmail' pass='pass_word'></div>
+      <button type="submit"  ng-click="onDelete(userEmail)" class="btn">Sign in</button>
+    </div>
+</body>
+</html>

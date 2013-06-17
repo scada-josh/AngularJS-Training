@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="Guidebook">
+<head>
+  <meta charset="utf-8">
+  <title>xx-Using Directive</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+  <!-- <script src="../../lib/angular-1.0.7/angular-resource.js"></script> -->
+  <script type="text/javascript" src="../../lib/jquery-1.8.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./index.config.js"></script>
+
+  <script src="./Controller/loginController.js"></script>
+  <script src="./view/directives/login.js"></script>
+</head>
+<body >
+    <div ng-controller="ChaptersController">
+      <div gb-note-list ></div>
+      <button type="submit"  ng-click="onDelete(userEmail)" class="btn">Sign in</button>
+    </div>
+
+    <hr/>
+    <h1>Basic</h1>
+    <div test-elem></div>
+    
+    <hr/>
+    <div test-elem-template></div>
+
+    <h1>Transclusion</h1>
+    <test-elem-transclude>
+      include me in there... somewhere... dunno where... template will decide
+    </test-elem-transclude>
+
+    <h1>Compile function</h1>
+    <div test-elem-compile>
+      parse me please!!!!!!! come oonnnn! just parse me!!!!!
+    </div>
+    
+    <hr/>
+
+    <div  ng-controller="MyController">
+      <!-- <script type="text/ng-template" id="in-place-edit.html">
+      <div>
+      <div ng-show="ui.mode=='view'">{{ model }} <a href="" ng-click="ui.mode='edit'">edit</a></div>
+      <div ng-show="ui.mode=='edit'">
+      <input type="text" ng-model="new_model" />
+      <button type="button" ng-click="save()">Save</button>
+      <button type="button" ng-click="ui.mode='view'">Cancel</button>
+      </div>
+      </script> -->
+
+      <p>Edit this field and hit save (mocks a successful save)</p>
+      <div in-place-edit="name" on-save="save_name(new_value)"></div>
+      <hr/>
+
+      <p>Edit this field and hit save (mocks a failed save)</p>
+      <div in-place-edit="phone" on-save="save_phone(new_value)"></div>
+    </div>
+
+
+
+</body>
+</html>

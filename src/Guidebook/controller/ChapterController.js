@@ -20,5 +20,9 @@ Guidebook.controller('ChaptersController',function ($scope, $location, $routePar
    		//alert('');
    	}
    };
+
+   $scope.onTest = function(noteId){
+      alert(noteId);
+   }
    
 });
