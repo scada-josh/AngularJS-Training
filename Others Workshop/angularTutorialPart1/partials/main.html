@@ -1,0 +1,18 @@
+<p>
+	This is the main.html partial view
+</p>
+
+
+
+<ul class="nav nav-tabs nav-stacked">
+	<li ng-repeat="cat in categories">
+		<a ng-href="#{{cat.link}}">
+			<i class="icon-chevron-right"></i> 
+			{{cat.title}}
+		</a>
+	</li>
+</ul>
+
+<pre>
+	{{categories | json}}
+</pre>

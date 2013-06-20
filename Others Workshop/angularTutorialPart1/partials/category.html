@@ -1,0 +1,27 @@
+<p>
+	This is the category.html partial view
+</p>
+
+
+<ul id="categoryList" class="nav nav-tabs nav-stacked">
+	<li ng-repeat="item in serieList">
+		<a ng-href="#{{item.link}}">
+			<div class="media">
+				<span class="pull-left thumbnail">
+					<img ng-src="{{item.thumbnail}}" class="img-rounded">
+				</span>
+				<div class="media-body">
+					<h4 class="media-heading">{{item.name}}</h4>
+					<p>{{item.description}}</p>
+					<span class="channelLogo"><img ng-src="{{item.channelLogo}}" class="img-rounded"></span>
+					<span class="channel">{{item.channel}}</span>
+				</div>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<pre>
+	{{serieList | json}}
+</pre>
+

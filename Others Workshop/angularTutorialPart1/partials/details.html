@@ -1,0 +1,79 @@
+<p>
+	This is the details.html partial view
+</p>
+
+
+<div class="row-fluid">
+	<div class="span12">
+		<div class="span6">
+			<img ng-src="{{theshow.thumbnail}}" alt="{{theshow.name}}">
+			<h1>{{theshow.name}}</h1>
+		</div>
+		<div class="span6">
+			<h2>{{theshow.EpisodeTitle}}</h2>
+			<p>{{theshow.EpisodeDescription}}</p>
+			<p>
+				<strong>Playting tonight at: </strong> {{theshow.displayTime}} <br>
+				on: {{theshow.channel}}
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="row-fluid">
+	<div class="span12">
+		<h3>The Cast</h3>
+		<ul id="cast" class="unstyled inline">
+			<li>
+				<img ng-src="{{theshow.husbandImg}}" alt="{{theshow.husband}}">
+			</li>
+			<li>
+				<img ng-src="{{theshow.wifeImg}}" alt="{{theshow.wife}}">
+			</li>
+			<li>
+				<img ng-src="{{theshow.kid1Img}}" alt="{{theshow.kid1}}">
+			</li>
+			<li>
+				<img ng-src="{{theshow.kid2Img}}" alt="{{theshow.kid2}}">
+			</li>
+			<li>
+				<img ng-src="{{theshow.kid3Img}}" alt="{{theshow.kid3}}">
+			</li>
+			<li>
+				<img ng-src="{{theshow.dogImg}}" alt="{{theshow.dog}}">
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<div id="moreStuff">
+    <div class="row-fluid">
+        <div class="long50 col" ng-class="class1" ng-click=" about(); predicate = '-seasonEpisode'; class1='selected'; class2='';">About</div>
+        <div class="long50 col" ng-class="class2" ng-click="related(); predicate = '-endDate'; class1=''; class2='selected'; ">Related</div>
+    </div>
+</div>
+
+
+
+<table class="table table-striped" ng-init="about();">
+	<thead>
+		<th>Season/Episode</th>
+		<th>Episode Title</th>
+		<th>Description</th>
+		<th>Air Date</th>
+		<th>Expires</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="info in details | orderBy: predicate"  >
+			<td>{{info.seasonEpisode}}</td>
+			<td>{{info.title}}</td>
+			<td>{{info.description}}</td>
+			<td>{{info.startDate}}</td>
+			<td>{{info.endDate}}</td>
+		</tr>
+	</tbody>
+
+</table>

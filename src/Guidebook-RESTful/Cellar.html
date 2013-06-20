@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="Cellar">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Starter Guidebook</title>
+  <link rel="stylesheet" href="../../lib/bootstrap-2.3.2/css/bootstrap.min.css">
+  <script src="../../lib/angular-1.0.7/angular.min.js"></script>
+  <script src="../../lib/angular-1.0.7/angular-resource.js"></script>
+
+   <script src='Cellar.config.js'></script>
+    <!-- <script src='controller/ChapterController.js'></script>
+    <script src='controller/NotesController.js'></script> -->
+    <script src='controller/CellarController.js'></script>
+   <!-- <script src='model/NoteModel.js'></script> 
+   <script src='model/ChapterModel.js'></script> -->
+   <script src='model/CellarModel.js'></script>
+
+   <link rel="stylesheet" href="css/styles.css" />
+
+
+</head>
+<body ng:controller="RouteCtrl">
+
+  <div id="header">
+    Angular Cellar
+    <button ng:click="addWine()">New Wine</button>
+  </div>
+
+  <div id="sidebar">
+    <ng:include src="'tpl/wine-list.html'"></ng:include>
+  </div>
+
+  <div id="content">
+    <ng:view></ng:view>
+  </div>
+
+</body>
+</html>
+
+

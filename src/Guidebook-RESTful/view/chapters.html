@@ -1,0 +1,38 @@
+<!-- This is chapters.html -->
+<ul>
+	<li ng-repeat='chapter in chapters | orderBy:"title"'>
+		<h2>{{chapter.title}}</h2>
+		<p>{{chapter.summary}}</p>
+		<p>
+			<!-- <a href='#/chapter/{{chapter.id}}'>
+				{{chapter.notes.length}}
+				<span ng-show='chapter.notes.length == 1'>note</span>
+				<span ng-hide='chapter.notes.length == 1'> notes</span>
+			</a> -->
+			<a href='#/chapter/{{chapter.id}}'>
+				{{chapter.notes.length}}
+				<ng-switch on='chapter.notes.length'>
+					<span ng-switch-when='0'>note</span>
+					<span ng-switch-when='1'>note</span>
+					<span ng-switch-default>notes</span>
+				</ng-switch>
+			</a>
+			<!-- <a href='#/chapter/{{chapter.id}}'>
+				{{chapter.notes.length}}
+				<ng-pluralize count='chapter.notes.length' when='{"0": "note", "1": "note", "other": "notes"}'></ng-pluralize>
+			</a> -->
+			|
+			<a href='#/addNote/{{chapter.id}}'>add note</a>
+		</p>
+		<!-- <ul class='notes' ng-show='chapter.id  == selectedChapterId'>
+			<li ng-repeat='note in chapter.notes | orderBy:"id"' ng-class-even='"even"' ng-class-odd='"odd"'>
+				<div>#{{$index}}</div>
+				<div><a href ng-click='onDelete(note.id)'>delete</a></div>
+				<p>{{note.content}}</p>
+			</li> 
+		<ul> -->
+		<div gb-note-list notes='chapter.notes' order-by='id' 
+			show='chapter.id == selectedChapterId' delete-note-handler='onDelete' test-note-handler='onTest'>
+		</div>
+	</li> 
+</ul>

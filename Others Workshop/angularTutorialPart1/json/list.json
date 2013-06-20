@@ -1,0 +1,34 @@
+[
+	{
+	    "name": "Family Guy",
+	    "thumbnail": "https://lh4.googleusercontent.com/-bOCABoTjHYE/T5nu0RraHdI/AAAAAAAABAw/TWYvo4JZy0k/s250/fg_profile.jpg",
+	    "link": "/details/family-guy",
+	    "channel": "Fox",
+	    "channelLogo" : "http://qph.cf.quoracdn.net/main-thumb-t-3262-50-d2GNtpS6Hf6w5xelw5ltTvNVQ8kn2yxn.jpeg",
+	    "description" : "It's topical. It's edgy. It takes political correctness, wraps it in a paper bag and leaves it flaming on Mary Whitehouse's doorstep before ringing the doorbell and running away. Best of all, it's twelve different kinds of funny. Family Guy is comedy for all tastes. "
+	},
+	{
+	    "name": "The Simpsons",
+	    "thumbnail": "https://lh5.googleusercontent.com/-lYxMpFZ96Ro/AAAAAAAAAAI/AAAAAAAABSo/-e9w4o9eTnU/s250-c-k/photo.jpg",
+	    "link": "/details/simpsons",
+	    "channel": "Fox",
+	    "channelLogo" : "http://qph.cf.quoracdn.net/main-thumb-t-3262-50-d2GNtpS6Hf6w5xelw5ltTvNVQ8kn2yxn.jpeg",
+	    "description" : "The Simpsons TV show is a 30 minute adult, animated comedy series on the FOX Network about a politically incorrect, dysfunctional family who make you feel that maybe your family's not so bad after all! "
+	},
+	{
+	    "name": "Common Law",
+	    "thumbnail": "http://blog.zap2it.com/frominsidethebox/common-law-gallery-1-usa-325.jpg",
+	    "link": "/details/common-law",
+	    "channel": "Showcase",
+	    "channelLogo" : "http://profile.ak.fbcdn.net/hprofile-ak-snc6/211072_57521976614_3980732_q.jpg",
+	    "description" : "Centers on cops Wes Mitchell and Travis Marks, who have a problem, each other. So their captain sends them to couples therapy."
+	},
+	{
+	    "name": "Murdoch Mysteries",
+	    "thumbnail": "http://television.thedigitalfix.com/protectedimage.php?image=AmyJones/murdoch_mysteries_082708.jpg_11062012",
+	    "link": "/details/murdoch-mysteries",
+	    "channel": "CBC",
+	    "channelLogo" : "http://www.digiflare.com/images/featured-work/cbc-logo.png",
+	    "description" : "Murdoch Mysteries is a Canadian drama television series that airs on CBC, featuring Yannick Bisson as William Murdoch, a police detective working in Toronto, Ontario in the 1890s"
+	}
+]

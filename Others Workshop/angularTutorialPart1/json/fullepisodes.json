@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Ratins Guy",
+        "link": "http://www.fox.com/familyguy/full-episodes/1849411828/ratings-guy", 
+        "seasonEpisode" : "11/2",  
+        "time" : "21:35",
+        "description": "Peter takes over television",
+        "picture" : "http://static-media.fox.com/img/Fox.com/740/755/FamilyGuy_AACX01_2500_640x360_2240067695.jpg",
+        "startDate" : "10/07/2012",
+        "endDate" : "12/09/2012"
+    }, 
+    {
+        "title": "Into Fat Air",
+        "link": "http://www.fox.com/familyguy/full-episodes/1369667602/into-fat-air",
+        "seasonEpisode" : "11/1",    
+        "time" : "21:38",
+        "description": "Ain't no mountains high enough for the Griffins",
+        "picture" : "http://static-media.fox.com/img/Fox.com/283/223/FamilyGuy_9ACX21_2500_640x360_1391171545.jpg",
+        "startDate" : "09/30/2012",
+        "endDate" : "12/02/2012"
+    }, 
+    {
+        "title": "Mr. and Mrs. Stewie ",
+        "link": "http://www.fox.com/familyguy/full-episodes/16337633/mr-and-mrs-stewie",  
+        "seasonEpisode" : "10/19", 
+        "time" : "21:38",
+        "description": "Stewie meets his match",
+        "picture" : "http://static-media.fox.com/img/Fox.com/16/595/FamilyGuy_9ACX17_2500_640x360_16356321.jpg",
+        "startDate" : "09/23/2012",
+        "endDate" : "11/25/2012" 
+    }, 
+    {
+        "title": "Viewer Mail #2 ",
+        "link": "http://www.fox.com/familyguy/full-episodes/18942251/viewer-mail-2",
+        "seasonEpisode" : "10/22",
+        "time" : "21:35",
+        "description": "Viewer mail is answered",
+        "picture" : "http://static-media.fox.com/img/Fox.com/19/67/FamilyGuy_9ACX19_2500_640x360_18948597.jpg",
+        "startDate" : "09/16/2012",
+        "endDate" : "11/18/2012"
+    }, 
+    {
+        "title": "Leggo my Meg-O",
+        "link": "http://www.fox.com/familyguy/full-episodes/16758723/leggo-my-meg-o",    
+        "seasonEpisode" : "10/20",
+        "time" : "21:38",
+        "description": "Brian and Stewie must save Meg",
+        "picture" : "http://static-media.fox.com/img/Fox.com/16/1006/FamilyGuy_9ACX16_2500_640x360_16776124.jpg",
+        "startDate" : "09/09/2012",
+        "endDate" : "11/11/2012"
+    }
+]
